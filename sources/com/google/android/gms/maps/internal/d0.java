@@ -1,0 +1,31 @@
+package com.google.android.gms.maps.internal;
+
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class d0 extends com.google.android.gms.internal.maps.l implements e0 {
+    public d0() {
+        super("com.google.android.gms.maps.internal.IOnMapReadyCallback");
+    }
+
+    @Override // com.google.android.gms.internal.maps.l
+    protected final boolean i0(int i7, Parcel parcel, Parcel parcel2, int i8) throws RemoteException {
+        b t1Var;
+        if (i7 != 1) {
+            return false;
+        }
+        IBinder strongBinder = parcel.readStrongBinder();
+        if (strongBinder == null) {
+            t1Var = null;
+        } else {
+            IInterface iInterfaceQueryLocalInterface = strongBinder.queryLocalInterface("com.google.android.gms.maps.internal.IGoogleMapDelegate");
+            t1Var = iInterfaceQueryLocalInterface instanceof b ? (b) iInterfaceQueryLocalInterface : new t1(strongBinder);
+        }
+        I1(t1Var);
+        parcel2.writeNoException();
+        return true;
+    }
+}

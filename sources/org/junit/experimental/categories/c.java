@@ -1,0 +1,29 @@
+package org.junit.experimental.categories;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes3.dex */
+abstract class c implements org.junit.runner.e {
+    c() {
+    }
+
+    private List<Class<?>> c(String str) throws ClassNotFoundException {
+        ArrayList arrayList = new ArrayList();
+        for (String str2 : str.split(",")) {
+            arrayList.add(org.junit.internal.c.a(str2));
+        }
+        return arrayList;
+    }
+
+    @Override // org.junit.runner.e
+    public org.junit.runner.manipulation.a a(org.junit.runner.f fVar) throws org.junit.runner.e.a {
+        try {
+            return b(c(fVar.a()));
+        } catch (ClassNotFoundException e8) {
+            throw new org.junit.runner.e.a(e8);
+        }
+    }
+
+    protected abstract org.junit.runner.manipulation.a b(List<Class<?>> list);
+}

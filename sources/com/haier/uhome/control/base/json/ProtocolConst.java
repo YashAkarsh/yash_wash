@@ -1,0 +1,57 @@
+package com.haier.uhome.control.base.json;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class ProtocolConst {
+    public static final String NOTIFY_DEVICE_ALARM = "device_alarm_notify";
+    public static final String NOTIFY_DEVICE_ATTR = "device_attr_notify";
+    public static final String NOTIFY_DEVICE_BLE_ADV_EPP = "device_ble_adv_epp_notify";
+    public static final String NOTIFY_DEVICE_EVENT = "device_event_notify";
+    public static final String NOTIFY_DEVICE_STATE = "device_state_notify";
+    public static final String NOTIFY_UCOM_TRACE_CB = "ucom_trace_cb_notify";
+    public static final String NOTIFY_UPDATE_ROUTER_SSID_PASSWORD = "update_router_ssid_password_notify";
+    public static final String ONLINE_STATE_OFFLINE = "OFFLINE";
+    public static final String ONLINE_STATE_PREFIX = "STATUS_";
+    public static final String REQ_BEGIN_UPDATE_ROUTER_SSID_PASSWORD = "begin_update_router_ssid_password_req";
+    public static final String REQ_BLE_MESH_SELF_NODE_INFO = "ble_mesh_self_node_info_req";
+    public static final String REQ_CLOUD_BIND_DEVICE = "cloud_bind_device_req";
+    public static final String REQ_CLOUD_GET_DEVICE_BIND_RESULT = "cloud_get_device_bind_result_req";
+    public static final String REQ_CLOUD_GET_DEVICE_INFO = "cloud_get_device_info_req";
+    public static final String REQ_CLOUD_GET_DEVICE_LIST = "cloud_get_device_list_req";
+    public static final String REQ_DEVICE_ATTR_READ = "device_attr_read_req";
+    public static final String REQ_DEVICE_ATTR_WRITE = "device_attr_write_req";
+    public static final String REQ_DEVICE_BIND_INFO = "device_get_bind_info_req";
+    public static final String REQ_DEVICE_CONNECT = "device_connect_req";
+    public static final String REQ_DEVICE_DISCONNECT = "device_disconnect_req";
+    public static final String REQ_DEVICE_GET_CACHE_ALARM = "device_get_all_alarm_cache_req";
+    public static final String REQ_DEVICE_GET_CACHE_PROPERTY = "device_get_all_property_cache_req";
+    public static final String REQ_DEVICE_GET_NETWORK_QUALITY = "device_get_network_quality_req";
+    public static final String REQ_DEVICE_GET_STATE = "device_get_state_req";
+    public static final String REQ_DEVICE_MODULE_INFO = "get_device_module_info_req";
+    public static final String REQ_DEVICE_OPER = "device_oper_req";
+    public static final String REQ_DEVICE_SET_GATEWAY = "device_set_gateway_req";
+    public static final String REQ_END_UPDATE_ROUTER_SSID_PASSWORD = "end_update_router_ssid_password_req";
+    public static final String REQ_UPDATE_IV_INDEX = "update_iv_index_req";
+    public static final String RESP_BEGIN_UPDATE_ROUTER_SSID_PASSWORD = "begin_update_router_ssid_password_resp";
+    public static final String RESP_BLE_MESH_SELF_NODE_INFO = "ble_mesh_self_node_info_resp";
+    public static final String RESP_CLOUD_BIND_DEVICE = "cloud_bind_device_resp";
+    public static final String RESP_CLOUD_GET_DEVICE_BIND_RESULT = "cloud_get_device_bind_result_resp";
+    public static final String RESP_CLOUD_GET_DEVICE_INFO = "cloud_get_device_info_resp";
+    public static final String RESP_DEVICE_ATTR_READ = "device_attr_read_resp";
+    public static final String RESP_DEVICE_ATTR_WRITE = "device_attr_write_resp";
+    public static final String RESP_DEVICE_BIND_INFO = "device_get_bind_info_resp";
+    public static final String RESP_DEVICE_CONNECT = "device_connect_resp";
+    public static final String RESP_DEVICE_DISCONNECT = "device_disconnect_resp";
+    public static final String RESP_DEVICE_GET_CACHE_ALARM = "device_get_all_alarm_cache_resp";
+    public static final String RESP_DEVICE_GET_CACHE_PROPERTY = "device_get_all_property_cache_resp";
+    public static final String RESP_DEVICE_GET_NETWORK_QUALITY = "device_get_network_quality_resp";
+    public static final String RESP_DEVICE_GET_STATE = "device_get_state_resp";
+    public static final String RESP_DEVICE_MODULE_INFO = "get_device_module_info_resp";
+    public static final String RESP_DEVICE_OPER = "device_oper_resp";
+    public static final String RESP_DEVICE_SET_GATEWAY = "device_set_gateway_resp";
+    public static final String RESP_END_UPDATE_ROUTER_SSID_PASSWORD = "end_update_router_ssid_password_resp";
+    public static final String RESP_UPDATE_IV_INDEX = "update_iv_index_resp";
+    public static final String ONLINE_STATE_CONNECT_FAILED = "CONNECT_FAILED";
+    public static final String ONLINE_STATE_CONNECTING = "CONNECTING";
+    public static final String ONLINE_STATE_CONNECTED = "CONNECTED";
+    public static final String ONLINE_STATE_PATTERN = String.format("^%s|%s|%s$", ONLINE_STATE_CONNECT_FAILED, ONLINE_STATE_CONNECTING, ONLINE_STATE_CONNECTED);
+}

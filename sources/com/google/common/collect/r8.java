@@ -1,0 +1,8 @@
+package com.google.common.collect;
+
+/* JADX INFO: loaded from: classes2.dex */
+@s1.b(emulated = true)
+abstract class r8<E> extends x6<E> {
+    r8() {
+    }
+}

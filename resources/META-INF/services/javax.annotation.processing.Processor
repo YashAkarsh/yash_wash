@@ -1,0 +1,4 @@
+com.alibaba.android.arouter.compiler.processor.a
+com.alibaba.android.arouter.compiler.processor.b
+com.alibaba.android.arouter.compiler.processor.c
+com.google.auto.service.processor.c

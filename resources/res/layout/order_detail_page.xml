@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="22dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/app_black_6"
+        android:id="@+id/tv_title"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+    <View
+        android:id="@+id/view_line"
+        android:background="@color/division_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"/>
+    <com.haier.globalwasher.view.custom_view.mlistview.MaxHeightListView
+        android:id="@+id/lv_max_child_item"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"/>
+</LinearLayout>

@@ -1,0 +1,45 @@
+package com.haier.uhome.control.base.json.resp;
+
+import g3.b;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class DeviceAttrReadResp extends BasicOpResp {
+
+    @b(name = "invalidCode")
+    private String invalidCode;
+
+    @b(name = "name")
+    private String name;
+
+    @b(name = "value")
+    private String value;
+
+    public String getInvalidCode() {
+        return this.invalidCode;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getValue() {
+        return this.value;
+    }
+
+    public void setInvalidCode(String str) {
+        this.invalidCode = str;
+    }
+
+    public void setName(String str) {
+        this.name = str;
+    }
+
+    public void setValue(String str) {
+        this.value = str;
+    }
+
+    @Override // com.haier.uhome.control.base.json.resp.BasicOpResp, com.haier.uhome.control.base.json.resp.BasicDeviceResp, com.haier.uhome.usdk.base.json.BasicResp
+    public String toString() {
+        return "DeviceAttrReadResp{name='" + this.name + "', value='" + this.value + "', invalidCode='" + this.invalidCode + "'}";
+    }
+}

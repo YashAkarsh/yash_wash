@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/utiles_temporarily_no_data"
+    android:background="@color/app_backgrade"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_wushuju_kongyemian"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/app_text_coler"
+        android:id="@+id/tv_notdata_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/no_network_nodatawasfound"/>
+</LinearLayout>

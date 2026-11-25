@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>测试分享交互</title>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
+    <script>
+      var vConsole = new VConsole();
+      console.log('Hello world');
+    </script>
+
+</head>
+
+<style type="text/css">
+
+button{
+font-size:35px;
+}
+
+
+</style>
+
+<body style="padding: 40px,40px ; height:400px;width:500px;margin-top:200px; font-size:35px;">
+<div class="page">
+    <button id="btn0"> 登陆</button>
+    <button id="btn1"> 分享</button>
+    <button id="btn4"> 设备信息</button>
+    <button id="btn2"> 新开页面</button>
+    <button id="btn3"> 关闭页面</button>
+
+    <a href='https://www.baidu.com'>百度</a>
+
+    <div id="content">内容反馈</div>
+</div>
+</body>
+
+<script type="text/javascript">
+        var name = "简单介绍";
+        var str1="{\"text\":\"https://www.baidu.com\",\"callBackMethodName\":\"message2\" }";
+        var str2="{\"url\":\"https://www.baidu.com\",\"callBackMethodName\":\"message2\",\"title\":\"测试title\",\"description\":\"测试description\"}";
+
+        document.getElementById("btn0").onclick = function(){
+             AndroidJSApi.loginModule().showLoginView("{\"callBackMethodName\":\"message2\" }");
+        };
+        document.getElementById("btn1").onclick = function(){
+             AndroidJSApi.loginModule().showLoginView("{\"callBackMethodName\":\"message2\" }");
+        };
+
+        document.getElementById("btn4").onclick = function(){
+          var v=JSON.parse( AndroidJSApi.deviceModule().getDeviceSysm());
+         console.log(v);
+           content.innerHTML =  JSON.stringify(v.retData)    ;
+
+        };
+         document.getElementById("btn2").onclick = function(){
+             AndroidJSApi.UIModule().openNewWindow(str2);
+         };
+
+         document.getElementById("btn3").onclick = function(){
+            AndroidJSApi.UIModule().closeWindow();
+         };
+        var content = document.getElementById("content");
+
+        function message2(des2){
+
+<!--        console.log('h5 回调结果：' + JSON.stringify(des2));-->
+            content.innerHTML = "调用了"+des2;
+            return "message2--"+des2;
+        };
+
+
+
+
+
+</script>
+</html>
+

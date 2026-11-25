@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/app_backgrade"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="13sp"
+        android:textColor="@color/app_text"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/barrels_Select_coupon"/>
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="16sp"
+        android:textColor="@color/app_zhexian_blue_relg"
+        android:gravity="center"
+        android:id="@+id/tv_is_use"
+        android:background="@color/app_white"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/barrels_of_not_use_coupon"
+        android:layout_alignParentBottom="true"/>
+    <com.haier.globalwasher.view.custom_view.xlist.XListView
+        android:id="@+id/xlv_coupon"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:layout_above="@+id/tv_is_use"
+        android:layout_below="@+id/title"/>
+</RelativeLayout>

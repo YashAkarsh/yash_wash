@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.haier.globalwasher.view.custom_view.wave_imageview.WaveFunctionView
+        android:id="@+id/iv_wava_3"
+        android:background="@drawable/order_run_time_background"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

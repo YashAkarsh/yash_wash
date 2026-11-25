@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingTop="16dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.haier.globalwasher.view.custom_view.FontTextView
+            android:textSize="15sp"
+            android:textColor="@color/app_black_6"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_read_tag"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/background_blue_button"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="15sp"
+        android:textColor="@color/app_text"
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

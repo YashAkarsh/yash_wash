@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar_view"
+        layout="@layout/toolbar_content"/>
+    <com.haier.globalwasher.view.custom_view.webview.MyWebView
+        android:id="@+id/myweb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_view"/>
+    <ImageView
+        android:background="@drawable/pic_bolangbg_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-1dp"
+        android:layout_below="@+id/toolbar_view"
+        android:translationZ="1dp"/>
+</RelativeLayout>

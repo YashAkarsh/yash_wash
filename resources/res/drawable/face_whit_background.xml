@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    <size
+        android:height="85dp"
+        android:width="85dp"/>
+    <solid android:color="@color/app_defult_background"/>
+</shape>

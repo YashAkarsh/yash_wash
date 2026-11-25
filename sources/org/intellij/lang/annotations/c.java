@@ -1,0 +1,51 @@
+package org.intellij.lang.annotations;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class c {
+
+    public @interface a {
+    }
+
+    public @interface b {
+    }
+
+    /* JADX INFO: renamed from: org.intellij.lang.annotations.c$c, reason: collision with other inner class name */
+    public @interface InterfaceC0527c {
+    }
+
+    public @interface d {
+    }
+
+    public @interface e {
+    }
+
+    public @interface f {
+    }
+
+    public @interface g {
+    }
+
+    public @interface h {
+    }
+
+    public @interface i {
+    }
+
+    public @interface j {
+    }
+
+    public @interface k {
+    }
+
+    public @interface l {
+    }
+
+    public @interface m {
+    }
+
+    public @interface n {
+    }
+
+    public @interface o {
+    }
+}

@@ -1,0 +1,9 @@
+package com.google.android.gms.maps.internal;
+
+import android.os.IInterface;
+import android.os.RemoteException;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface g0 extends IInterface {
+    boolean m(com.google.android.gms.internal.maps.h0 h0Var) throws RemoteException;
+}

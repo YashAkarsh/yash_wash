@@ -1,0 +1,21 @@
+package com.airbnb.lottie.value;
+
+import android.view.animation.Interpolator;
+
+/* JADX INFO: loaded from: classes.dex */
+public class d extends f<Integer> {
+    public d(Integer num, Integer num2) {
+        super(num, num2);
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    @Override // com.airbnb.lottie.value.f
+    /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+    public Integer e(Integer num, Integer num2, float f8) {
+        return Integer.valueOf(com.airbnb.lottie.utils.i.k(num.intValue(), num2.intValue(), f8));
+    }
+
+    public d(Integer num, Integer num2, Interpolator interpolator) {
+        super(num, num2, interpolator);
+    }
+}

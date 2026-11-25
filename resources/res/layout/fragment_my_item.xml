@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="17dp"
+    android:paddingTop="15dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_left_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="17sp"
+        android:textColor="@color/my_item_content"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_arrow_wode"/>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_activity_lft_img"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"/>
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="13sp"
+        android:textColor="@color/app_text"
+        android:ellipsize="end"
+        android:id="@+id/ftv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="36dp"
+        android:layout_toStartOf="@+id/ftv_time"
+        android:layout_toEndOf="@+id/iv_activity_lft_img"/>
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="12sp"
+        android:textColor="@color/app_text"
+        android:id="@+id/ftv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_calendar"
+        android:drawablePadding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

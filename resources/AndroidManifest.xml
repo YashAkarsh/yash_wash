@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="51"
+    android:versionName="1.9.11"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.haier.globalwasher"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
+        android:maxSdkVersion="29"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"/>
+    <queries>
+        <package android:name="com.paytm.pgsdk.TransactionManager.PAYTM_APP_PACKAGE"/>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application
+        android:theme="@style/TranslucentTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/logo"
+        android:name="com.haier.globalwasher.MyApplication"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logo"
+        android:maxAspectRatio="2.4"
+        android:appComponentFactory="abc"
+        android:minAspectRatio="1"
+        android:requestLegacyExternalStorage="true">
+        <receiver
+            android:name="com.haier.globalwasher.presenter.broadcast_receiver.QuitLoginBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.haier.globalwasher.quit_login"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.videopage.VedioActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity android:name="com.haier.globalwasher.view.activity.share.FaceBookActivity"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4"/>
+        <meta-data
+            android:name="android.min_aspect"
+            android:value="1"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBsFiTZTJF9ShNznf1qPCybHKU-JeJgG7o"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.haier.globalwasher.FileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepath"/>
+        </provider>
+        <service
+            android:name="com.haier.globalwasher.presenter.services.UpdateIntentService"
+            android:exported="false"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.TestActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.Test2Activity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBarWithBackGround"
+            android:name="com.haier.globalwasher.view.activity.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="open_haili"
+                    android:host="globalwasher"
+                    android:port="8001"
+                    android:path="/startPage"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:name="com.haier.globalwasher.view.activity.GuidePageActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|orientation|keyboardHidden|locale|mnc|mcc"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.SettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.MessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.CaptureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.LoginPhoneActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.RetrievePhoneActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.RetrievePassWordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.VerificationCodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.loginregistrationbackmodel.RedisterRetrieveSucceedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.AddDataProfileEmailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.UPDataProfileEmailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.UPDataProfilePasswprdActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.HelpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.CouponActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.UpDataProfileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.order.OrderDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.order.SubscriptSuccessfulActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.order.SendCodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.laundry.NerabyLaundryWashShoesDryListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.laundry.LaundryWashShoesDryDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.laundry.NerabyLaundryWashShoesDryMapActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.pay.OrderPayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.order.PayCouponActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.order.OrderIsPaidToRunActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.device.WasherDeviceDetaileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.device.DryerDetaileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.SecurityCenterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.CancellationAccountActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.haier.globalwasher.view.activity.my_page.AuthenticationCenterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:maxAspectRatio="2.4"
+            android:minAspectRatio="1"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.alipay.sdk.app.PayResultActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.alipay.sdk.app.AlipayResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.haier.library.common.util.permissions.ShadowActivity"
+            android:launchMode="singleTop"/>
+        <service
+            android:name="com.haier.uhome.ble.hal.BleServiceImpl"
+            android:enabled="true"/>
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
+        <activity
+            android:theme="@style/TransparentActivityTheme"
+            android:name="com.paytm.pgsdk.AioMatchUserActivity"/>
+        <service
+            android:name="com.paytm.pgsdk.IntentServicePostNotification"
+            android:exported="false"/>
+        <service
+            android:name="com.paytm.pgsdk.IntentServicePreNotification"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/com_facebook_activity_theme"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.haier.globalwasher"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="easypay.appinvoke.utils.EasyPayConfigDownloader"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <service
+            android:name="easypay.appinvoke.utils.AnalyticsService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity android:name="easypay.appinvoke.AnalyticsManagerInfoDisplayActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.haier.globalwasher.FacebookInitProvider"/>
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.haier.globalwasher.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <provider
+            android:name="me.jessyan.autosize.InitProvider"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.haier.globalwasher.autosize-init-provider"/>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="1"/>
+    </application>
+</manifest>

@@ -1,0 +1,19 @@
+package androidx.test.rule;
+
+import androidx.test.internal.platform.ServiceLoaderWrapper;
+import androidx.test.runner.permission.PermissionRequester;
+
+/* JADX INFO: loaded from: classes.dex */
+final /* synthetic */ class GrantPermissionRule$$Lambda$0 implements ServiceLoaderWrapper.Factory {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    static final ServiceLoaderWrapper.Factory f10346a = new GrantPermissionRule$$Lambda$0();
+
+    private GrantPermissionRule$$Lambda$0() {
+    }
+
+    @Override // androidx.test.internal.platform.ServiceLoaderWrapper.Factory
+    public Object create() {
+        return new PermissionRequester();
+    }
+}

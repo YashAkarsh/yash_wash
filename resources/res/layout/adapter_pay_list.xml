@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingTop="18dp"
+    android:paddingRight="14dp"
+    android:paddingBottom="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_tag"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:layout_marginStart="5dp"/>
+    <com.haier.globalwasher.view.custom_view.FontTextView
+        android:textSize="17sp"
+        android:textColor="@color/app_black_6"
+        android:id="@+id/tv_pay_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_weight="1"/>
+    <CheckBox
+        android:id="@+id/cb_selelct_pay"
+        android:background="@drawable/select_pay_background"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"/>
+</LinearLayout>

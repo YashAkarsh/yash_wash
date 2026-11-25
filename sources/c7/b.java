@@ -1,0 +1,19 @@
+package c7;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.experimental.theories.d;
+import org.junit.experimental.theories.e;
+import org.junit.experimental.theories.g;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class b extends e {
+    @Override // org.junit.experimental.theories.e
+    public List<g> a(d dVar) {
+        ArrayList arrayList = new ArrayList();
+        for (int i7 : ((a) dVar.g(a.class)).ints()) {
+            arrayList.add(g.a("ints", Integer.valueOf(i7)));
+        }
+        return arrayList;
+    }
+}

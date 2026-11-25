@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/app_backgrade"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginTop="-10dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/lly_margin"
+        android:background="@drawable/first_laundry_item_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/defult_padding_16"
+        android:layout_marginTop="@dimen/projection_list_top"
+        android:layout_marginRight="@dimen/defult_padding_16"
+        android:layout_marginBottom="@dimen/projection_list_bottom"
+        android:translationZ="2dp"
+        android:elevation="3dp"
+        android:outlineProvider="background">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            layout="@layout/item_time"/>
+        <com.haier.globalwasher.view.custom_view.seekbar.RangeSeekBar
+            android:id="@+id/range_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/progress_horizontal_my"/>
+    </LinearLayout>
+</LinearLayout>
